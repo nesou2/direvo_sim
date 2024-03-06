@@ -1,4 +1,4 @@
-# Directed/Controlled Evolution
+# Directed Evolution Simulator
 Code for running controlled evolution experiments. 
 
 Please look in examples_notebook.ipynb for a short example on how to use the codebase 🙂
