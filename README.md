@@ -1,7 +1,6 @@
-# Directed Evolution Simulator
-Code for running controlled evolution experiments. 
+# Directed Evolution Simulation
+Code for running directed evolution experiments. 
 
-Please look in examples_notebook.ipynb for a short example on how to use the codebase 🙂
 
 
 [Steel Lab Oxford](http://steel.ac/)
@@ -11,3 +10,8 @@ Please look in examples_notebook.ipynb for a short example on how to use the cod
              (__)\       )\/\
                  ||----w |
                  ||     ||
+
+### This code requires Jax. 
+Please follow the instructions at https://jax.readthedocs.io/en/latest/installation.html to install.
+
+To see how the code works, please refer to examples_notebook.ipynb.
