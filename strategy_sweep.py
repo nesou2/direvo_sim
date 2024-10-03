@@ -3,7 +3,6 @@ import numpy as np
 import jax
 import jax.numpy as jnp
 import jax.random as jr
-import matplotlib.pyplot as plt
 from direvo_functions import *
 from param_sampler import *
 import selection_function_library as slct
@@ -63,7 +62,7 @@ K_ratio = [0.25, 0.2, 0.15, 0.1,0.05,0]
 
 reps = 1
 
-sweep_results = np.zeros((3,3,3,3,5,5))
+sweep_results = np.zeros((3,3,2,6,5,5))
 total_iterations = len(pops) * len(muts) * len(Ns) * len(np.array(K_ratio) * max(Ns)) * len(splits) * len(base_chances)
 
 with tqdm.tqdm(total=total_iterations, desc="Overall Progress") as pbar:
