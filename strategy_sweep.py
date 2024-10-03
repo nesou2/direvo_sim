@@ -55,11 +55,11 @@ def directedEvolution(rng,
     return results
 
 thresholds, base_chances = base_chance_threshold_fixed_prop([0,0.19], 0.2, 5)
-splits = [100,50,5,2,1]
+splits = [20,10,5,2,1]
 muts = [0.01,0.1,0.5]
 pops = [5000, 1000, 100]
-Ns = [50,25,10]
-K_ratio = [0.2, 0.1,0]
+Ns = [50,25]
+K_ratio = [0.25, 0.2, 0.15, 0.1,0.05,0]
 
 reps = 1
 
@@ -85,7 +85,7 @@ with tqdm.tqdm(total=total_iterations, desc="Overall Progress") as pbar:
                                     params = {'threshold': th, 'base_chance' : bc}
                                     run = directedEvolution(split_rngs[s], 
                                                             N = N, 
-                                                            K=K, 
+                                                            K=int(K), 
                                                             selection_strategy=slct.base_chance_threshold_select, 
                                                             selection_params = params, 
                                                             popsize=int(p/s), 
@@ -104,5 +104,5 @@ with tqdm.tqdm(total=total_iterations, desc="Overall Progress") as pbar:
                             # Update progress bar
                             pbar.update(1)
 
-with open('strategy_sweep4_fixedrngs.pkl', 'wb') as f:
+with open('strategy_sweep5.pkl', 'wb') as f:
     pickle.dump(sweep_results, f)
