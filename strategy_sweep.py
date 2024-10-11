@@ -93,8 +93,8 @@ with tqdm.tqdm(total=total_iterations, desc="Overall Progress") as pbar:
                                                             num_reps=40, 
                                                             average=True)
                                 
-                                    #split_results.append(run['fitness'].max(axis=2).mean(axis=0)[-1])
-                                    split_results.append(run['fitness'][:,:,-1].max(axis=1).mean())
+                                    split_results.append(run['fitness'].max(axis=2).mean(axis=0)[-1])
+                                    #split_results.append(run['fitness'][:,:,-1].max(axis=1).mean())
 
                                 repeat_results.append(np.array(split_results).max())
 
