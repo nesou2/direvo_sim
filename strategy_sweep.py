@@ -103,5 +103,5 @@ with tqdm.tqdm(total=total_iterations, desc="Overall Progress") as pbar:
                             # Update progress bar
                             pbar.update(1)
 
-with open('strategy_sweep6.pkl', 'wb') as f:
+with open('strategy_sweep7.pkl', 'wb') as f:
     pickle.dump(sweep_results, f)
